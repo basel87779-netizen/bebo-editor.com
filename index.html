@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional video editing and montage services by Bassel." />
+    <title>Bassel – Professional Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <style>
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(20, 20, 20, 0.95);
+        border: 1px solid #444;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        z-index: 1000;
+        text-align: center;
+      }
+      .popup a {
+        display: inline-block;
+        margin: 0.5rem 1rem;
+        padding: 0.75rem 1.25rem;
+        background: #00f0ff;
+        color: black;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .popup-close {
+        cursor: pointer;
+        margin-top: 1rem;
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+    </style>
+    <script>
+      function showPopup() {
+        document.getElementById('popup-contact').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+      }
+      function closePopup() {
+        document.getElementById('popup-contact').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+      }
+      function openGmail() {
+        window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=bmm14102009@gmail.com';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="overlay" class="overlay" onclick="closePopup()"></div>
+    <header class="fade-in">
+      <nav>
+        <h1 class="logo">Bassel <span>Editor</span></h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#contact" class="cta">Start Now →</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2 class="headline">Master of Video Montage</h2>
+        <p>I create cinematic video edits, story-driven cuts, and jaw-dropping visuals for your content.</p>
+        <a href="#contact" class="btn pulse">Work With Me</a>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>What I Offer</h2>
+      <div class="card-grid">
+        <div class="card">🎞️ Cinematic Video Editing</div>
+        <div class="card">✂️ Reels & Shorts for Social Media</div>
+        <div class="card">🎬 Storytelling Cuts & Montages</div>
+        <div class="card">💼 Editing for YouTubers & Brands</div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <h2>My Work</h2>
+      <div class="card-grid">
+        <div class="card">🔥 Promo Reel for a Fitness Brand</div>
+        <div class="card">🎮 Gaming Montage with VFX</div>
+        <div class="card">🎥 Wedding Highlights with Emotion</div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Client Feedback</h2>
+      <div class="testimonial">
+        <p>“Bassel made my wedding video unforgettable — the transitions, the feel, just perfect.”</p>
+        <strong>— Nour, Bride</strong>
+      </div>
+      <div class="testimonial">
+        <p>“He turned my vlog into a cinematic story. Super talented editor!”</p>
+        <strong>— Khaled, YouTuber</strong>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let’s Create Magic</h2>
+      <p>Contact me directly by phone or Gmail. I’m available for freelance projects and collaborations.</p>
+      <button onclick="showPopup()" class="btn glow">📞 Contact Bassel</button>
+      <div id="popup-contact" class="popup">
+        <h3>Contact Bassel</h3>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bmm14102009@gmail.com" target="_blank">📧 Gmail</a>
+        <a href="tel:+96550440120">📞 Phone</a>
+        <div class="popup-close" onclick="closePopup()">❌ Close</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Bassel. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
